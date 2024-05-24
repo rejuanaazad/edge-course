@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="one.html">Problem 1</a> |
+        <a href="two.html">Problem 2</a> |
+        <a href="three.html">Problem 3</a> |
+        <a href="four.html">Problem 4</a> |
+        <a href="five.html">Problem 5</a> |
+        <a href="six.html">Problem 6</a> |
+        <a href="seven.html">Problem 7</a> |
+        <a href="eight.html">Problem 8</a> |
+        <a href="vue/index.html" target="_blank">Problem 9</a>
+    </nav> 
+    <br><br>
+    <h1>Problem 3</h1><br>
+    <div>
+        <form id="ageForm" action="three.php" method="GET">
+            Enter your age
+            <input name="age" id="age" type="text" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("ageForm").addEventListener("submit", function(event) {
+                var ageInput = document.getElementById("age");
+                if (ageInput.value < 100) {
+                    // Allow form submission
+                    return true;
+                } else {
+                    // Prevent form submission
+                    event.preventDefault();
+                    // Show alert
+                    alert("Invalid Input");
+                    // Highlight input field
+                    ageInput.classList.add("error");
+                    var textBox = document.getElementById("age");
+
+
+                    textBox.style.borderColor = "red";
+                    return false;
+                }
+            });
+        });
+        </script>
+</body>
+</html>

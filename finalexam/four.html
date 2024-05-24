@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bold {
+         font-weight: bold;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .italic {
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="one.html">Problem 1</a> |
+        <a href="two.html">Problem 2</a> |
+        <a href="three.html">Problem 3</a> |
+        <a href="four.html">Problem 4</a> |
+        <a href="five.html">Problem 5</a> |
+        <a href="six.html">Problem 6</a> |
+        <a href="seven.html">Problem 7</a> |
+        <a href="eight.html">Problem 8</a> |
+        <a href="vue/index.html" target="_blank">Problem 9</a>
+    </nav> 
+    <br><br>
+    <h1>Problem 4</h1><br>
+    <div>
+        <p id="text">This is a paragraph</p>
+        <button id="boldBtn">Bold</button>
+        <button id="italicBtn">Italic</button>
+        <button id="underlineBtn">Underline</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var boldBtn = document.getElementById("boldBtn");
+    var underlineBtn = document.getElementById("underlineBtn");
+    var italicBtn = document.getElementById("italicBtn");
+    var text = document.getElementById("text");
+
+    boldBtn.addEventListener("click", function() {
+        text.classList.toggle("bold");
+    });
+
+    underlineBtn.addEventListener("click", function() {
+        text.classList.toggle("underline");
+    });
+    italicBtn.addEventListener("click", function() {
+        text.classList.toggle("italic");
+    });
+});
+    </script>
+</body>
+</html>
